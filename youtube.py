@@ -25,8 +25,8 @@ def index():
             youtube_url="https://www.youtube.com/"
             youtube_video_url = youtube_url + '@'+ channel_id + "/videos"
 
-            #ineuron_scrapper_obj=scrapper(driver_path=r'\chromedriver.exe')
-            ineuron_scrapper_obj=scrapper()
+            ineuron_scrapper_obj=scrapper(driver_path=r'\chromedriver.exe')
+            #ineuron_scrapper_obj=scrapper()
             driver=ineuron_scrapper_obj.run_driver()
             
 

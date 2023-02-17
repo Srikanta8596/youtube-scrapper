@@ -5,9 +5,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import logging
 class scrapper:
-    def __init__(self):
-        #self.driver_path=driver_path
-        pass
+    def __init__(self,driver_path):
+        self.driver_path=driver_path
+        #pass
 
     def run_driver(self): 
         try:
@@ -20,8 +20,8 @@ class scrapper:
             option.add_argument('-disable-dev-shm-usage')
             #driver = webdriver.Chrome(service = Service(executable_path = os.environ.get("CHROMEDRIVER_PATH")), options = option)  # For cloud
             #logging.info(f"Driver path: {self.driver_path}" )
-            #driver = webdriver.Chrome(self.driver_path, options=option) # For testing in windows
-            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
+            driver = webdriver.Chrome(self.driver_path, options=option) # For testing in windows
+            #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
             return driver
         except Exception as e:
             logging.info(e)
