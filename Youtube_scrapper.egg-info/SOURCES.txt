@@ -1,0 +1,10 @@
+LICENSE.chromedriver
+setup.py
+Youtube_scrapper.egg-info/PKG-INFO
+Youtube_scrapper.egg-info/SOURCES.txt
+Youtube_scrapper.egg-info/dependency_links.txt
+Youtube_scrapper.egg-info/top_level.txt
+database/__init__.py
+database/sql.py
+scrapper/__init__.py
+scrapper/youtube_scrapper.py

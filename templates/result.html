@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+  <div class="content">
+    <h1 style="text-align: center">Enter video string to search</h1>
+
+    <div class="form" style="text-align: center">
+        <form action="/video_detail" method="POST">
+            <input type="text" name="url" id="url">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+
+  <div class="table-users">
+   <div class="header">Reviews</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th width="100" >Title</th>
+         <th>Views</th>
+         <th>Link </th>
+      </tr>
+         {% for video in videos %}
+      <tr>
+          <td>{{video['title']}}</td>
+         <td>{{video['views']}}</td>
+         <td>{{video['link']}}</td>
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
